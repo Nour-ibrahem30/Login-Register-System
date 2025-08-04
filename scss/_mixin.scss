@@ -1,0 +1,20 @@
+@mixin center-absolute {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin absolute-fill {
+    position: relative;
+    left: 0;
+    height: 90vh;
+    width: 98%;
+}
+
+@mixin circle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Register System</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./scss/master.css" />
+</head>
+
+<body>
+    <!-- Loading Animation Container -->
+    <div class="over-follow"></div>
+
+    <!-- Overflow Content Container -->
+    <div class="overflow position-relative text-center d-flex align-items-center justify-content-center">
+        <!-- You can add background or loader here if needed -->
+    </div>
+
+    <!-- Sign-Up Form -->
+    <div class="sign-up  position-absolute d-flex align-items-center text-center">
+        <div class="container">
+            <form method="get" class="d-flex flex-column gap-3">
+                <input type="text" class="form-control" pattern="[A-Za-z]{3,}" required
+                    placeholder="Please Enter Your Name" title="Enter Your Name" />
+                <input type="password" class="form-control" id="password" required maxlength="10"
+                    placeholder="Password" />
+                <input type="submit" class="btn btn-primary" value="Send" />
+            </form>
+
+            <div class="information mt-4">
+                <p>Forgot Your Password?</p>
+                <span class="text-black-50">
+                    Don't have an account?
+                    <button class="sign-up-btn btn btn-link p-0">Sign up here</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign-In Form -->
+    <div class="sign-in position-absolute d-flex align-items-center text-center">
+        <div class="container">
+            <form method="get" class="d-flex flex-column gap-3">
+                <input type="text" class="form-control" pattern="[A-Za-z]{3,}" required
+                    placeholder="Please Enter Your Name" title="Enter Your Name" />
+                <input type="password" class="form-control" id="password-sign-in" required maxlength="10"
+                    placeholder="Password" />
+                <input type="password" class="form-control" id="return-password-sign-in" required maxlength="10"
+                    placeholder="Confirm Password" />
+                <input type="submit" class="btn btn-primary" value="Send" />
+            </form>
+
+            <div class="information mt-4">
+                <p>Forgot Your Password?</p>
+                <span class="text-black-50">
+                    Already have an account?
+                    <button class="sign-in-btn btn btn-link p-0">Sign in here</button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="./dist/bootstrap.bundle.js"></script>
+
+    <!-- Main JavaScript Module -->
+    <script type="module" src="./dist/main.js"></script>
+</body>
+
+</html>
