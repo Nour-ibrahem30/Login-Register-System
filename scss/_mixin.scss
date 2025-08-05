@@ -8,8 +8,6 @@
 @mixin absolute-fill {
     position: relative;
     left: 0;
-    height: 90vh;
-    width: 98%;
 }
 
 @mixin circle {

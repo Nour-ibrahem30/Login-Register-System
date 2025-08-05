@@ -34,6 +34,7 @@
     transition: opacity 0.6s ease;
 
     &.show {
+        height: 0;
         opacity: 1;
         visibility: visible;
     }
@@ -41,6 +42,9 @@
     &::before {
         content: "";
         @include absolute-fill;
+        height: 90vh;
+            width: 98%;
+            top: 500px;
         background-color: $primary-color;
         transition: transform 1s ease;
         border-radius: 0 500px 500px 0;
@@ -161,5 +165,16 @@
 
     &.translate-right span {
         transform: translate(200%, -50%);
+    }
+}
+.slide-bar {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        height: 100vh;
     }
 }
