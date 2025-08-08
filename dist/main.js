@@ -4,9 +4,14 @@ const overFlow = document.querySelector(".overflow");
 const signUp = document.querySelector(".sign-up");
 const signIn = document.querySelector(".sign-in");
 const slideBar = document.querySelector(".slide-bar");
+const signOut = document.querySelector(".sign-out");
+const ulElement = document.querySelector("ul.nav");
 const signUpButton = document.querySelector(".sign-up-btn");
 const signInButton = document.querySelector(".sign-in-btn");
 const submitButtonSignIn = document.querySelector(".sign-in .submit");
+const modalTrigger = document.querySelector(".al");
+const nameButton = document.querySelector(".name");
+const passwordButton = document.querySelector(".password");
 for (let i = 0; i < 4; i++) {
     const span = document.createElement("span");
     overFollow === null || overFollow === void 0 ? void 0 : overFollow.appendChild(span);
@@ -66,7 +71,6 @@ formSignIn.addEventListener("submit", (e) => {
     try {
         localStorage.setItem(name, password);
         console.log("✅ Data Saved:", { name, password });
-        const modalTrigger = document.querySelector(".al");
         if (modalTrigger)
             modalTrigger.click();
     }
@@ -86,14 +90,12 @@ formSignUp.addEventListener("submit", (e) => {
     if (storedPassword && storedPassword === password) {
         localStorage.setItem("loggedInUser", name);
         localStorage.setItem("password", password);
-        const modalTrigger = document.querySelector(".al");
         if (modalTrigger)
             modalTrigger.click();
         setTimeout(() => {
             slideBar.style.display = "block";
             slideBar.classList.add("active", "show");
-            overFlow.classList.remove("active");
-            overFlow.style.opacity = "0";
+            overFlow === null || overFlow === void 0 ? void 0 : overFlow.remove();
             signIn.classList.remove("active");
             signUp.classList.remove("active", "show");
             const userName = document.querySelector(".dropdown .user-name");
@@ -103,5 +105,29 @@ formSignUp.addEventListener("submit", (e) => {
     else {
         alert("❌ Invalid username or password!");
     }
+});
+signOut.addEventListener("click", () => {
+    window.localStorage.clear();
+    const modalBody = document.querySelector(".modal .modal-body");
+    modalBody.textContent = "Login Out Is Success";
+    if (modalTrigger)
+        modalTrigger.click();
+    setTimeout(() => {
+        window.location.reload();
+    }, 1000);
+});
+nameButton.addEventListener("click", () => {
+    const liName = document.createElement("li");
+    liName.textContent = window.localStorage.getItem("loggedInUser");
+    liName.classList.add("nav-item", "text-white");
+    liName.style.cssText = "margin-left: 45px; margin-top: 10px;";
+    ulElement.appendChild(liName);
+});
+passwordButton.addEventListener("click", () => {
+    const liPassword = document.createElement("li");
+    liPassword.textContent = window.localStorage.getItem("password");
+    liPassword.classList.add("nav-item", "text-white");
+    liPassword.style.cssText = "margin-left: 45px; margin-top: 10px;";
+    ulElement.appendChild(liPassword);
 });
 //# sourceMappingURL=main.js.map

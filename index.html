@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login & Register System</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="Login & Register Interface using Bootstrap and Vanilla JS">
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.css" />
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="./scss/master.css" />
+    <link rel="stylesheet" href="./css/master.css" />
 </head>
 
 <body>
@@ -65,17 +69,15 @@
             </div>
         </div>
     </div>
-    <!-- Button trigger modal -->
+<!-- Modal -->
     <button type="button" class="btn btn-primary al d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Status For Login
     </button>
-
-    <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Status For Login</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
@@ -91,7 +93,7 @@
             class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"> <svg
                 class="bi pe-none me-2" width="40" height="32" aria-hidden="true">
                 <use xlink:href="#bootstrap"></use>
-            </svg> <span class="fs-4">Sidebar</span> </a>
+            </svg> <span class="fs-4">Your Information</span> </a>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item"> <a href="#" class="nav-link active" aria-current="page"> <svg class="bi pe-none me-2"
@@ -100,29 +102,17 @@
                     </svg>
                     Home
                 </a> </li>
-            <li> <a href="#" class="nav-link text-white"> <svg class="bi pe-none me-2" width="16" height="16"
+            <li> <a href="#" class="nav-link text-white name"> <svg class="bi pe-none me-2" width="16" height="16"
                         aria-hidden="true">
                         <use xlink:href="#speedometer2"></use>
                     </svg>
-                    Dashboard
+                    Your Name
                 </a> </li>
-            <li> <a href="#" class="nav-link text-white"> <svg class="bi pe-none me-2" width="16" height="16"
+            <li> <a href="#" class="nav-link text-white password"> <svg class="bi pe-none me-2" width="16" height="16"
                         aria-hidden="true">
                         <use xlink:href="#table"></use>
                     </svg>
-                    Orders
-                </a> </li>
-            <li> <a href="#" class="nav-link text-white"> <svg class="bi pe-none me-2" width="16" height="16"
-                        aria-hidden="true">
-                        <use xlink:href="#grid"></use>
-                    </svg>
-                    Products
-                </a> </li>
-            <li> <a href="#" class="nav-link text-white"> <svg class="bi pe-none me-2" width="16" height="16"
-                        aria-hidden="true">
-                        <use xlink:href="#people-circle"></use>
-                    </svg>
-                    Customers
+                    Your Password
                 </a> </li>
         </ul>
         <hr>
@@ -130,21 +120,13 @@
                 data-bs-toggle="dropdown" aria-expanded="false"> <img src="https://github.com/mdo.png" alt="" width="32"
                     height="32" class="rounded-circle me-2"> <strong class="user-name">mdo</strong> </a>
             <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                <li><a class="dropdown-item" href="#">New project...</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                <li><a class="dropdown-item sign-out" href="#">Sign out</a></li>
             </ul>
         </div>
     </div>
     <!-- Bootstrap JS Bundle -->
     <script src="./dist/bootstrap.bundle.js"></script>
-
     <!-- Main JavaScript Module -->
     <script type="module" src="./dist/main.js"></script>
 </body>
-
 </html>

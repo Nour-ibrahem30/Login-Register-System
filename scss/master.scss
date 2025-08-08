@@ -1,7 +1,8 @@
+// Export Files
 @use "./mixin" as *;
 @use "./Variables" as *;
 
-// ===== Loader Animation =====
+/*  Loading Animation  */
 .over-follow {
     background-color: $black;
     width: 100%;
@@ -24,7 +25,7 @@
     }
 }
 
-// ===== Overlay Transition =====
+/*  Overlay Transition  */
 .overflow {
     @include absolute-fill;
     top: 0;
@@ -43,7 +44,7 @@
         content: "";
         @include absolute-fill;
         height: 90vh;
-            width: 98%;
+        width: 98%;
             top: 500px;
         background-color: $primary-color;
         transition: transform 1s ease;
@@ -62,7 +63,7 @@
     }
 }
 
-// ===== Common Form Panel Styles =====
+/*  Form Panels  */
 %form-panel {
     position: absolute;
     top: 50%;
@@ -125,7 +126,7 @@
     }
 }
 
-// ===== Animation =====
+/*  Animation  */
 @keyframes sp {
     from {
         transform: translate(-50%, -50%) scale(1);
@@ -138,7 +139,7 @@
     }
 }
 
-// ===== over-follow animation effect =====
+/* Over-follow animation  */
 .over-folow {
     background-color: black;
     width: 100%;
@@ -167,6 +168,7 @@
         transform: translate(200%, -50%);
     }
 }
+/* Slide bar  */
 .slide-bar {
     opacity: 0;
     visibility: hidden;
@@ -176,5 +178,50 @@
         opacity: 1;
         visibility: visible;
         height: 100vh;
+    }
+ul {
+    a {
+        cursor: pointer;
+    }
+}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overflow {
+        width: 100%;
+
+        &::before {
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            border-radius: 0;
+        }
+
+        &.translate-left::before,
+        &.translate-right::before {
+            transform: translateX(0);
+            border-radius: 0;
+        }
+    }
+
+    .sign-up,
+    .sign-in {
+        padding: 20px;
+        max-width: 90%;
+        transform: translate(-50%, -50%) !important;
+
+        &.active {
+            transform: translate(-50%, -50%) !important;
+        }
+    }
+
+    .form-container {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .slide-bar {
+        height: auto;
     }
 }
