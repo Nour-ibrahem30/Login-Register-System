@@ -93,6 +93,4 @@ Nour Ibrahem
 
 GitHub: Nour-ibrahem30
 
-LinkedIn: (Add your LinkedIn URL if available)
-
 © 2025 Nour Ibrahim. All rights reserved.
